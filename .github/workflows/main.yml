@@ -1,0 +1,20 @@
+name: Launch16GBRAM
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Connect Tailscale Network
+      uses: tailscale/github-action@v4
+      with:
+        authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
+    - name: Start 16GB RAM PC
+      run: |
+        net user clouduser VibeCut786! /add
+        net localgroup administrators clouduser /add
+        echo "=========================================="
+        echo "Username: clouduser"
+        echo "Password: VibeCut786!"
+        echo "=========================================="
+        while ($true) { Start-Sleep -Seconds 60 }
