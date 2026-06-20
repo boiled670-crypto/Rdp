@@ -8,7 +8,7 @@ jobs:
     - name: Connect Tailscale Network
       uses: tailscale/github-action@v4
       with:
-        authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
+        authkey: ${{ secrets.tskey-auth-kUzuDikDBx11CNTRL-Bgm2RZtsQv5RapZzyJaAw5yC798m3yhL }}
     - name: Start 16GB RAM PC
       run: |
         net user clouduser VibeCut786! /add
